@@ -55,25 +55,29 @@ public class ConvertingMachine
     public double parse(String string)
     {
     	InterimResult result = new InterimResult(1, 1, 0);
+    	State currentState = State.START;
+    	
         for (int i = 0; i < string.length(); i++)
         {
-        	search(string.charAt(i),result);
+        	currentState = search(currentState, string.charAt(i)).nextState;
         }
         return 0;
     }
 
-	private void search(char charAt, InterimResult result)
+	private Edge search(State currentState, char charAt)
 	{
+		Edge returnedEdge = null;
 		for (Edge e : machine)
 		{
-			if (e.currentState == State.START)
+			if (e.currentState == currentState)
 			{
 				if (e.inputVerifier.meetsCriteria(charAt))
 				{
-					e.action.execute(result, charAt);
+					
 				}
 			}
 		}
 		
+		return returnedEdge;
 	}
 }
