@@ -64,7 +64,7 @@ public class ConvertingMachine
         	result = e.action.execute(result, string.charAt(i));
         	currentState = e.nextState;
         }
-        return result.getV();
+        return result.getS()*result.getV();
     }
 
 	private Edge search(State currentState, char charAt)
@@ -80,7 +80,6 @@ public class ConvertingMachine
 				}
 			}
 		}
-		
-		return returnedEdge;
+		throw new NumberFormatException();
 	}
 }
