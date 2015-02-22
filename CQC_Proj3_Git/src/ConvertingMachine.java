@@ -59,7 +59,10 @@ public class ConvertingMachine
     	
         for (int i = 0; i < string.length(); i++)
         {
-        	currentState = search(currentState, string.charAt(i)).nextState;
+        	Edge e;
+        	e = search(currentState, string.charAt(i));
+        	result = e.action.execute(result, string.charAt(i));
+        	currentState = e.nextState;
         }
         return result.getV();
     }
