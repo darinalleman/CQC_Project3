@@ -2,6 +2,12 @@
 public class ContinuingFractionAction implements Action
 {
 
+	/**
+	 * If there is another number after we have already encountered a 
+	 * decimal, simply add that number times the current tens position.
+	 * Then set p to the next smallest tens position so its ready for the
+	 * next one.
+	 */
     @Override
     public InterimResult execute(InterimResult x, char c)
     {
