@@ -54,7 +54,19 @@ public class ConvertingMachine
 
     public double parse(String string)
     {
-        // TODO Auto-generated method stub
+        for (int i = 0; i < string.length(); i++)
+        {
+        	search(string.charAt(i));
+        }
         return 0;
     }
+
+	private void search(char charAt)
+	{
+		for (Edge e : machine)
+		{
+			//if (e.currentState = )
+		}
+		
+	}
 }
