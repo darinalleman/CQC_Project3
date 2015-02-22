@@ -61,7 +61,7 @@ public class ConvertingMachine
         {
         	currentState = search(currentState, string.charAt(i)).nextState;
         }
-        return 0;
+        return result.getV();
     }
 
 	private Edge search(State currentState, char charAt)
@@ -73,7 +73,7 @@ public class ConvertingMachine
 			{
 				if (e.inputVerifier.meetsCriteria(charAt))
 				{
-					
+					return e;
 				}
 			}
 		}
