@@ -1,4 +1,9 @@
 
+/**
+ * The action to be taken when you find another integer before a decimal space.
+ * @author Darin Alleman & Darnell Martin
+ *
+ */
 public class ContinuingIntegerAction implements Action
 {
 

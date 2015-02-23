@@ -1,4 +1,8 @@
 
+/**
+ * @author Darin
+ * Check if the input is a plus sign.
+ */
 public class PlusInputVerifier implements InputVerifier
 {
 

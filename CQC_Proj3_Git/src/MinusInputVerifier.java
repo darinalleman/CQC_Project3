@@ -1,4 +1,8 @@
 
+/**
+ * @author Darin & Darnell
+ * Check if the input is a minus sign. 
+ */
 public class MinusInputVerifier implements InputVerifier
 {
     /**

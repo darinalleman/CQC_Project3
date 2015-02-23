@@ -1,4 +1,9 @@
 
+/**
+ * Action to be taken when getting another digit after the decimal point
+ * @author Darin Alleman & Darnell Martin
+ *
+ */
 public class ContinuingFractionAction implements Action
 {
 

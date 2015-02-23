@@ -52,6 +52,10 @@ public class ConvertingMachine
 		START, INTEGER, DECIMAL, END
 	}
 
+    /**
+     * @param string - the sequence of characters to be parsed to find a number
+     * @return the number parsed from the input string
+     */
     public double parse(String string)
     {
     	InterimResult result = new InterimResult(1, 1, 0);
@@ -67,9 +71,14 @@ public class ConvertingMachine
         return result.getS()*result.getV();
     }
 
+    /**
+     * seach to find which edge is the edge we are on and need to take
+     * @param currentState 
+     * @param charAt
+     * @return the edge that we are at
+     */
 	private Edge search(State currentState, char charAt)
 	{
-		Edge returnedEdge = null;
 		for (Edge e : machine)
 		{
 			if (e.currentState == currentState)

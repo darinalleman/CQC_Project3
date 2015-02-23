@@ -1,4 +1,7 @@
-
+/**
+ * @author Darin
+ * Check if the input is a period
+ */
 public class PeriodInputVerifier implements InputVerifier
 {
 
